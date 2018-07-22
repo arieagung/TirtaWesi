@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/loginViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvPhoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/etPhone"
+            android:visibility="gone"
+            android:text="Phone Number"
+            app:layout_constraintBottom_toTopOf="@+id/etPhone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:inputType="phone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/verifyViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvVerifyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/etVerifyCode"
+            android:text="Verification Code"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/etVerifyCode"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <EditText
+            android:id="@+id/etVerifyCode"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnVerify"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Verify"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etVerifyCode"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/mainViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="5dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/wargaViewGroup"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:padding="@dimen/inside_box_padding"
+                android:background="@drawable/layer_card_background"
+                >
+                <TextView
+                    android:id="@+id/tvDataWargaLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WARGA"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:visibility="visible"
+                    />
+
+                <TextView
+                    android:id="@+id/tvRumahLabel"
+                    android:layout_width="@dimen/label_width"
+                    android:layout_height="wrap_content"
+                    android:text="Rumah"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDataWargaLabel"
+                    app:layout_constraintLeft_toLeftOf="@+id/tvDataWargaLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    app:layout_constraintLeft_toRightOf="@+id/tvRumahLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvRumahLabel"/>
+                <TextView
+                    android:id="@+id/tvNoRumah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kav.01"
+                    android:layout_marginLeft="10dp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvRumahLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvRumahLabel"/>
+
+                <TextView
+                    android:id="@+id/tvNamaLabel"
+                    android:layout_width="@dimen/label_width"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRumahLabel"
+                    app:layout_constraintLeft_toLeftOf="@+id/tvRumahLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    app:layout_constraintLeft_toRightOf="@+id/tvNamaLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvNamaLabel"/>
+                <TextView
+                    android:id="@+id/tvNamaPemilik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arie Agung"
+                    android:layout_marginLeft="10dp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvNamaLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvNamaLabel"/>
+
+                <TextView
+                    android:id="@+id/tvPemakaianTerbayarLabel"
+                    android:layout_width="@dimen/label_width"
+                    android:layout_height="wrap_content"
+                    android:text="Terbayar"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNamaLabel"
+                    app:layout_constraintLeft_toLeftOf="@+id/tvNamaLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    app:layout_constraintLeft_toRightOf="@+id/tvPemakaianTerbayarLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPemakaianTerbayarLabel"/>
+                <TextView
+                    android:id="@+id/tvPenggunaanTerbayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="90 m3"
+                    android:layout_marginLeft="10dp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvPemakaianTerbayarLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPemakaianTerbayarLabel"/>
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tagihanViewGroup"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:padding="@dimen/inside_box_padding"
+                android:background="@drawable/layer_card_background"
+                android:visibility="visible"
+                >
+
+                <TextView
+                    android:id="@+id/tvTagihanLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TAGIHAN "
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tvBulanTagihan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toRightOf="@id/tvTagihanLabel"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTagihanLabel"/>
+
+                <TextView
+                    android:id="@+id/tvPemakaianLabel"
+                    android:layout_width="@dimen/label_width"
+                    android:layout_height="wrap_content"
+                    android:text="Pemakaian"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTagihanLabel"
+                    app:layout_constraintLeft_toLeftOf="@+id/tvTagihanLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    app:layout_constraintLeft_toRightOf="@+id/tvPemakaianLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPemakaianLabel"/>
+                <TextView
+                    android:id="@+id/tvPemakaian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14"
+                    android:layout_marginLeft="10dp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvPemakaianLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPemakaianLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="m3"
+                    android:layout_marginLeft="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPemakaianLabel"
+                    app:layout_constraintLeft_toRightOf="@+id/tvPemakaian"/>
+
+                <TextView
+                    android:id="@+id/tvBiayaLabel"
+                    android:layout_width="@dimen/label_width"
+                    android:layout_height="wrap_content"
+                    android:text="Biaya"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPemakaianLabel"
+                    app:layout_constraintLeft_toLeftOf="@+id/tvPemakaianLabel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": "
+                    app:layout_constraintLeft_toRightOf="@+id/tvBiayaLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBiayaLabel"/>
+                <TextView
+                    android:id="@+id/tvTagihan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 10.000"
+                    android:layout_marginLeft="10dp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvBiayaLabel"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBiayaLabel"/>
+
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/meteranViewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/layer_card_background"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/wargaViewGroup"
+            app:layout_constraintLeft_toLeftOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/tvMeterViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/meterView"
+                android:text="POSISI METERAN AIR"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <com.alexzaitsev.meternumberpicker.MeterView
+                android:id="@+id/meterView"
+                style="@style/MeterViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvMeterViewLabel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                android:id="@+id/tvLastMeterUpdateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terakhir update : "
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/meterView"
+                app:layout_constraintLeft_toLeftOf="@+id/meterView"
+                app:layout_constraintRight_toRightOf="@id/meterView"/>
+            <Button
+                android:id="@+id/btnUpdateMeter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                app:layout_constraintTop_toBottomOf="@+id/tvLastMeterUpdateLabel"
+                app:layout_constraintLeft_toLeftOf="@+id/meterView"
+                app:layout_constraintRight_toRightOf="@+id/meterView"
+                />
+        </android.support.constraint.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/pembayaranViewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/meteranViewGroup"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:orientation="vertical"
+            >
+            <Button
+                android:id="@+id/btnKonfirmasiPembayaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Konfirmasi Pembayaran"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/layer_card_background"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/meteranViewGroup"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RIWAYAT PEMBAYARAN"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:text="Tanggal"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:text="Pemakaian"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:text="Pembayaran"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:text="Status"/>
+                </LinearLayout>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvPaymentList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </ScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

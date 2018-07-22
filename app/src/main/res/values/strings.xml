@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Tirta Wesi</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="fui_verify_phone_number_title" translation_description="Phone number entry form title">Login</string>
+    <string name="fui_invalid_phone_number" translation_description="Inline error when phone number entered is invalid">Masukan nomor telpon yang valid</string>
+    <string name="fui_enter_confirmation_code" translation_description="Phone number verification code entry form title">Masukan 6-digit kode yang dikirim</string>
+    <string name="fui_resend_code_in" translation_description="Countdown timer text that the user needs to wait for before attempting to resend verification sms">Mengirim ulang dalam 0:%02d</string>
+    <string name="fui_verify_your_phone_title" translation_description="Button text to complete phone number verification">Verifikasi nomor telpon</string>
+    <string name="fui_verifying" translation_description="Progress dialog text while phone number is being verified">Memverifikasi…</string>
+    <string name="fui_incorrect_code_dialog_body" translation_description="Inline error when incorrect sms verification code is being used to verify">Kode salah. Coba kembali.</string>
+    <string name="fui_error_too_many_attempts" translation_description="Error message when the phone number has been used too many times">Nomor telpon ini sudah terlalu banyak digunakan</string>
+    <string name="fui_error_quota_exceeded" translation_description="Error message when the Firebase project's quota has been exceeded.">Ada masalah dalam proses verifikasi nomor telpon</string>
+    <string name="fui_error_session_expired" translation_description="Error message when SMS confirmation code has expired.">Kode tersebut sudah tidak valid</string>
+    <string name="fui_sign_in_with_phone_number" translation_description="Label for phone number input form">Masuk menggunakan nomor telpon</string>
+    <string name="fui_auto_verified" translation_description="Popup informing the user that their phone number was automatically verified">Nomor telpon terverifikasi otomatis</string>
+    <string name="fui_resend_code" translation_description="Link text to resend verification sms">Mengirim ulang kode</string>
+    <string name="fui_verify_phone_number" translation_description="Button text to submit confirmation code and complete phone verification">Verifikasi nomor telpon</string>
+    <string name="fui_continue_phone_login" translation_description="Button text to submit phone number and send sms">Lanjut</string>
+    <string name="fui_sms_terms_of_service" translation_description="Fine print warning displayed below Verify Phone Number button">Dengan menekan “%1$s”, SMS akan terkirim.</string>
+</resources>

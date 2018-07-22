@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1059922348261",
+    "firebase_url": "https://tirtawesi.firebaseio.com",
+    "project_id": "tirtawesi",
+    "storage_bucket": "tirtawesi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059922348261:android:e0f87c742d069d54",
+        "android_client_info": {
+          "package_name": "com.deuxvelva.tirtawesi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059922348261-2p0cbdk6pu52asf4dctomcthpe3pnsga.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.deuxvelva.tirtawesi",
+            "certificate_hash": "0a9ed60dc32e700f2dafa72e5fb0a6cdf3574e04"
+          }
+        },
+        {
+          "client_id": "1059922348261-r0kkki0bin8uo2qgeulou1iflopcradi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPOGQwd0R1CYJxmltW8wxtTX09dZhe8II"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059922348261-r0kkki0bin8uo2qgeulou1iflopcradi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
